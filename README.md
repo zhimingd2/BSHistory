@@ -7,3 +7,5 @@ git remote add origin https://github.com/zhimingd2/BSHistory.git
 git push -u origin master
 
 https://github.com/zhimingd2/BSHistory
+
+https://www.valentinog.com/blog/react-webpack-babel/

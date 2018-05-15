@@ -1,0 +1,21 @@
+
+
+#container {
+    width: 1200px;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+
+#sidebar {
+    width: 721px;
+    min-height: 300px;
+    float: right;
+}
+
+#context {
+    width: 300px;
+    min-height: 300px;
+    margin-right: 721px;
+}
+
