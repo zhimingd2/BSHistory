@@ -28,7 +28,6 @@ export function getAllHistory() {
 
 export function Search(SearchKey) {
     let messagesRef = firebase.database().ref('history');
-    
     return (dispatch) =>{
         let total = [];
         messagesRef.orderByChild("date").on('value', snap => {
@@ -38,7 +37,6 @@ export function Search(SearchKey) {
                 
                 console.log('SearchKey:' + SearchKey.length);
                 if( d.description.toLowerCase().indexOf(SearchKey.toLowerCase())>= 0){
-                   
                     total.push(d);
                 }
             });
