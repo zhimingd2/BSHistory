@@ -1,12 +1,17 @@
 
 
 #container {
-    width: 1000px;
+    width: 1200px;
     min-height: 300px;
     overflow: hidden;
 }
 
-
+#sidebarleft {
+    width: 220px;
+    min-height: 300px;
+    float: left;
+    
+}
 #sidebar {
     width: 721px;
     min-height: 300px;
@@ -17,5 +22,6 @@
     width: 250px;
     min-height: 300px;
     margin-right: 721px;
+    margin-left: 150px;
 }
 

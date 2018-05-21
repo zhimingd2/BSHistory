@@ -14,8 +14,13 @@ const Total = ({ histories }) => (
   )
 
 class HistoryList extends Component{
+    constructor(props){
+        super(props);
+        this.state = { sortAscending: false };
+    }
+
     componentWillMount(){
-        this.props.actions.getAllHistory();
+        this.props.actions.getAllHistory(this.state.sortAscending);
     }
     renderList() {
         const list = this.props.histories.map((history) =>{ 
@@ -23,7 +28,7 @@ class HistoryList extends Component{
             return(
                 <tr
                     onClick={()=> this.props.actions.selectHistory(history)}
-                    key={history.fdate+history.description} >
+                    key={history.fdate+history.description+history.deposit} >
                 
                     <td>{fdate}</td>
                     <td>{description}</td>

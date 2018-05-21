@@ -13,14 +13,14 @@ class SearchBar extends Component {
 
     onInputChange(event){
         console.log(event.target.value);
-        this.setState( { term: event.target.value} );
+        this.setState( { term: event.target.value, sortAscending: false} );
     }
 
     onFormSubmit(event){
         event.preventDefault();
 
         //call action
-        this.props.Search(this.state.term);
+        this.props.Search(this.state.term,this.state.sortAscending);
 
         //clear search input
         this.setState( {term: '' } );
